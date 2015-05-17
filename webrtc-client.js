@@ -1,14 +1,17 @@
 var host = host || 'localhost';
+var port = port || '56000';
 var globalUserID = globalUserID || '';
 
 $(function () {
 
+  // map element ids
   var myVideo = document.getElementById('my-video');
   var theirVideo = document.getElementById('their-video');
   var myId = document.getElementById('my-id');
-  var video = document.getElementById('their-id');
+  var theirId = document.getElementById('their-id');
   var incomingCallAudio = document.getElementById('incoming-call-audio');
 
+  // disable audio to prevent feedback
   var constraints = {video: true, audio: false};
 
   function successCallback(stream) {
@@ -31,10 +34,11 @@ $(function () {
   var peer = new Peer(globalUserID, {
     key: 'peerjs',
     host: host,
-    port: 56000,
+    port: port,
     debug: 3
   });
 
+  // connected to server
   peer.on('open', function (id) {
     console.log('Peer connected with id=' + id);
     $('#my-id').text(id);
@@ -65,7 +69,7 @@ $(function () {
         theirVideo = attachMediaStream(theirVideo, stream);
       });
 
-      // UI stuff
+      // make existing call available to console
       window.existingCall = call;
 
       $('#their-id').text(call.peer);
