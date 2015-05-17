@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>WebRTC Demo | Alice</title>
+  <link rel="stylesheet" href="themes/slate.min.css"/>
+  <link rel="stylesheet" href="themes/video.ui.css"/>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/webrtc-adapter/adapter.js"></script>
+  <script src="bower_components/peerjs/peer.min.js"></script>
+
+  <!-- configure HOST and USER id -->
+  <script>
+    host = 'localhost';
+    globalUserID = 'alice-123';
+  </script>
+  <script src="webrtc-client.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>User ID: <strong id="my-id"></strong></h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" placeholder="Enter peer ID" id="callto-id">
+      <button class="btn btn-success" id="make-call">Make Call</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
+      <h5>Remote Video</h5>
+      <video id="their-video" autoplay></video>
+      <audio id="incoming-call-audio" src="sounds/back_to_the_future.mp3" preload="auto"></audio>
+      <button class="btn btn-warning" id="end-call">End Remote Video</button>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-2">
+      <h5>Local Video</h5>
+      <video id="my-video" autoplay></video>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

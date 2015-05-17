@@ -1,0 +1,30 @@
+{
+  "name": "webrtc-client",
+  "version": "0.1.0",
+  "authors": [
+    "Antonio Aguilar"
+  ],
+  "description": "Simple WebRTC client",
+  "keywords": [
+    "WebRTC",
+    "SIP",
+    "Voip",
+    "Video",
+    "Multimedia"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/antonioaguilar/webrtc-client",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "webrtc-adapter": "*",
+    "peerjs": "~0.3.14",
+    "jquery": "~2.1.4",
+    "adapterjs": "~0.10.6"
+  }
+}

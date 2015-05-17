@@ -1,0 +1,13 @@
+#my-video {
+  background-color: black;
+  border: 1px solid greenyellow;
+  width: 100px;
+  height: 100px;
+}
+
+#their-video {
+  background-color: black;
+  border: 1px solid greenyellow;
+  width: 320px;
+  height: 320px;
+}
